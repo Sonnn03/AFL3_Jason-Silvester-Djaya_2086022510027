@@ -20,9 +20,9 @@
             color: white;
             padding: 30px 40px;
             display: flex;
-            flex-direction: row;    /* KUNCI RAHASIANYA: Mengubah arah jadi menyamping */
-            justify-content: space-between; /* Memisah Logo ke ujung kiri dan Menu ke ujung kanan */
-            align-items: center;    /* Teks sejajar di tengah secara vertikal */
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             position: fixed;
             top: 0;                
             z-index: 1000;
@@ -233,4 +233,36 @@
     font-size: 14px;
     font-family: 'Inter', sans-serif;
     opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .hero-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
 }
